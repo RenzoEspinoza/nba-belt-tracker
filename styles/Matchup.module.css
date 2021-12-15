@@ -1,0 +1,21 @@
+.matchupWrapper {
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.matchup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.versus {
+    align-self: center;
+    padding: 0 2rem
+}
+.moreGames{
+    text-decoration: underline;
+}
