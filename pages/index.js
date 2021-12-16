@@ -4,14 +4,14 @@ import { CurrentMatchup, LastMatchup } from '../components/Matchup'
 const index = () => {
     const dummyData = {championId: 17,
         championName: 'Milwaukee Bucks',
-        challengerId: 19,
-        challengerName: 'New Orleans Pelicans',
+        challengerId: 23,
+        challengerName: 'Philadelphia 76ers',
         startTime: new Date('2021-12-23T02:00:00.000Z'),
         streak: 3,
         season: 2021,
-        championScore: 115,
-        challengerScore: 104,
-        venue: 'Smoothie King Center',
+        championScore: 104,
+        challengerScore: 115,
+        venue: 'Wells Fargo Center',
     }
 
     const dummyData2 = {championId: 23,

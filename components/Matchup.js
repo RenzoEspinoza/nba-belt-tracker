@@ -2,6 +2,7 @@ import React from 'react'
 import TeamIcon from './TeamIcon'
 import Link from 'next/link'
 import styles from '../styles/Matchup.module.css'
+import Image from 'next/image'
 
 const Matchup = (props) => {
     return (
@@ -9,12 +10,11 @@ const Matchup = (props) => {
             <h1>{props.title}</h1>
             <div className={styles.matchup}>
                 <div className={styles.champion}>
-                    <div>
-                        <TeamIcon teamId={props.championId} width={props.iconWidth} height={props.iconHeight}/>
-                    </div>
+                    <TeamIcon teamId={props.championId} width={props.iconWidth} height={props.iconHeight}/>
                     <h3>{props.championName}</h3>
                     <h2>{props.championScore}</h2>
                     {props.StreakCounter}
+                    <Image src='/../public/nba-title-belt.svg' width='120px' height='60'></Image>
                 </div>
                 <div className={styles.versus}>
                     <h1>vs</h1>

@@ -12,6 +12,10 @@
     justify-content: space-evenly;
     align-items: flex-start;
 }
+.champion *, .challenger * {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+}
 .versus {
     align-self: center;
     padding: 0 2rem
