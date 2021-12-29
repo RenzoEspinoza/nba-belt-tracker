@@ -13,7 +13,8 @@ const index = (props) => {
 }
 
 export async function getStaticProps(context) {
-    const res = await fetch(`http://localhost:3001/api/matchup/latest`)
+    const apiUrl = `${process.env.API_URL}/matchup/latest`
+    const res = await fetch(apiUrl)
     const data = await res.json()
     if (!data) {
         return {
