@@ -10,9 +10,9 @@ const Matchup = (props) => {
             <h1>{props.title}</h1>
             <div className={styles.matchup}>
                 <div className={styles.champion}>
-                    <TeamIcon teamId={props.championId} width={props.iconWidth} height={props.iconHeight}/>
-                    <h3>{props.championName}</h3>
-                    <h2>{props.championScore}</h2>
+                    <TeamIcon teamId={props.champ.id} width={props.iconWidth} height={props.iconHeight}/>
+                    <h3>{props.champ.name}</h3>
+                    <h2>{props.champ.score}</h2>
                     {props.StreakCounter}
                     <Image src='/../public/nba-title-belt.svg' width='120px' height='60'></Image>
                 </div>
@@ -23,9 +23,9 @@ const Matchup = (props) => {
                     <h5>{props.venue}</h5>
                 </div>
                 <div className={styles.challenger}>
-                    <TeamIcon teamId={props.challengerId} width={props.iconWidth} height={props.iconHeight}/>
-                    <h3>{props.challengerName}</h3>
-                    <h2>{props.challengerScore}</h2>
+                    <TeamIcon teamId={props.challenger.id} width={props.iconWidth} height={props.iconHeight}/>
+                    <h3>{props.challenger.name}</h3>
+                    <h2>{props.challenger.score}</h2>
                 </div>
             </div>
             {props.MoreGames}
@@ -34,9 +34,9 @@ const Matchup = (props) => {
 }
 
 export const CurrentMatchup = (props) => {
-    const time = props.startTime.toLocaleTimeString('default', {hour: '2-digit', minute:'2-digit'})
-    console.log(time);
-    const date = props.startTime.toLocaleDateString('default', { month: 'short', weekday: 'long', day: 'numeric'})
+    const startTime = new Date(props.startTime+'Z')
+    const time = startTime.toLocaleTimeString('default', {hour: '2-digit', minute:'2-digit'})
+    const date = startTime.toLocaleDateString('default', { month: 'short', weekday: 'long', day: 'numeric'})
     const StreakCounter = (props) => {
         return(
             <h4>Current Streak: {props.streak}</h4>
@@ -48,7 +48,7 @@ export const CurrentMatchup = (props) => {
 }
 
 export const LastMatchup = ({championName, challengerName, venue, ...props}) => {
-    let date = props.startTime
+    let date = new Date(props.startTime+'Z')
     const month = date.getMonth() + 1
     const day = date.getDate() + 1
     date = month + '/' + day
