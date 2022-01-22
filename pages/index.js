@@ -2,12 +2,14 @@ import Layout from '../components/Layout'
 import { CurrentMatchup, LastMatchup } from '../components/Matchup'
 
 const index = (props) => {
-    const currentSeason = props.data[0].season
-    
     return (
         <Layout>
-            <CurrentMatchup {...props.data[0]}/>
-            <LastMatchup {...props.data[1]}/>
+            <div style={{margin : '3rem auto'}}>
+                <CurrentMatchup {...props.data[0]}/>
+            </div>
+            <div style={{margin : '3rem auto'}}>
+                <LastMatchup {...props.data[1]}/>
+            </div>
         </Layout>
     )
 }

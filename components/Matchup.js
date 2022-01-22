@@ -14,7 +14,7 @@ const Matchup = (props) => {
                     <h3>{props.champ.name}</h3>
                     <h2>{props.champ.score}</h2>
                     {props.StreakCounter}
-                    <Image src='/../public/nba-title-belt.svg' width='120px' height='60'></Image>
+                    {props.championshipBelt}
                 </div>
                 <div className={styles.versus}>
                     <h1>vs</h1>
@@ -43,7 +43,7 @@ export const CurrentMatchup = (props) => {
         )
     }
     return(
-        <Matchup {...props} time={time} date={date} title='Current Matchup' iconHeight='200px' iconWidth='200px' StreakCounter={<StreakCounter streak={props.streak}></StreakCounter>} ></Matchup>
+        <Matchup {...props} championshipBelt={championshipBelt} time={time} date={date} title='Current Matchup' iconHeight='200px' iconWidth='200px' StreakCounter={<StreakCounter streak={props.streak}></StreakCounter>} ></Matchup>
     )
 }
 
@@ -55,11 +55,23 @@ export const LastMatchup = ({championName, challengerName, venue, ...props}) => 
     const MoreGames = () => {
         return(
             <div className={styles.moreGames}>
-                <Link href='/matchHistory'>More Games</Link>
+                <Link href='/history'>More Games</Link>
             </div>
         )
     }
     return(
-        <Matchup {...props} date={date} title='Last Matchup' iconHeight='150px' iconWidth='150px' MoreGames={<MoreGames/>} ></Matchup>
+        <Matchup {...props} championshipBelt={championshipBelt} date={date} title='Last Matchup' iconHeight='150px' iconWidth='150px' MoreGames={<MoreGames/>} ></Matchup>
     )
 }
+
+export const HistoricMatchup = ({championName, challengerName, venue, ...props}) => {
+    let date = new Date(props.startTime+'Z')
+    const month = date.getMonth() + 1
+    const day = date.getDate() + 1
+    date = month + '/' + day
+    return(
+        <Matchup {...props} date={date} iconHeight='100px' iconWidth='100px'></Matchup>
+    )
+}
+
+const championshipBelt = (<Image src='/../public/nba-title-belt.svg' width='120px' height='60'></Image>)
