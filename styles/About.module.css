@@ -1,0 +1,13 @@
+.container {
+    background-color: white;
+    padding: 0.25rem 2rem;
+    border-radius: 0.25rem;
+}
+
+.container a:link {
+    color: #630109;
+}
+  
+.container a:visited {
+    color: #C9082A;
+}

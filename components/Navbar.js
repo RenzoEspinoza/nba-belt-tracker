@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>NBA Title Belt</div>
-            <nav className='navbar'>
+            <nav>
                 <ul>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/about">About</Link></li>

@@ -23,6 +23,7 @@
 .decadeRow li {
     width: 100%;
     text-align: center;
+    border-left: 1px solid lightslategrey;
 }
 
 .decadeRow li:hover{
@@ -54,7 +55,6 @@
 }
 
 .seasonsDropdown li {
-    padding: 0.25rem;
-    border-right: 1px solid lightslategrey;
+    padding: 0.5rem;
     font-size: 18px;
 }

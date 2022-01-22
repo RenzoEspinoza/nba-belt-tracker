@@ -10,7 +10,7 @@ const history = (props) => {
 
     return(
         <Layout>
-            <div style={{backgroundColor : 'silver', borderRadius : '0.75rem'}}>
+            <div style={{backgroundColor : '#d7e9f5', borderRadius : '0.75rem'}}>
                 <div style={{padding : '1rem'}}>
                     <SeasonSelector seasons={seasons} selectedSeason={selectedSeason} setSeason={setSelectedSeason}/>
                 </div>
