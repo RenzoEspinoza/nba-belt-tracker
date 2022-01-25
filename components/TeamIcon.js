@@ -1,7 +1,8 @@
 import Image from "next/image"
 
 const TeamIcon = (props) => {
-    const fileName = `/../public/team_logos/${props.teamId}.svg`
+    const fileName = `/team_logos/${props.teamId}.svg`
+    console.log(fileName);
     return (
         <>
             <Image src={fileName} width={props.width} height={props.height}/>
