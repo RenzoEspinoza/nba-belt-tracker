@@ -74,4 +74,4 @@ export const HistoricMatchup = ({championName, challengerName, venue, ...props})
     )
 }
 
-const championshipBelt = (<Image src='/../public/nba-title-belt.svg' width='120px' height='60'></Image>)
+const championshipBelt = (<Image src='/nba-title-belt.svg' width='120px' height='60'></Image>)
