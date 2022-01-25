@@ -4,7 +4,7 @@ import TeamIcon from './TeamIcon';
 
 const SeasonHistory = (props) => {
     let matchupList = props.season.map((item) => 
-        <MatchupPreview matchup={item}/>
+        <MatchupPreview key={item.id} matchup={item}/>
     )
 
     return (

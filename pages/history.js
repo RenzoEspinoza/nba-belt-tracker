@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import SeasonHistory from '../components/SeasonHistory';
 import SeasonSelector from '../components/SeasonSelector';
 
-const history = (props) => {
+const History = (props) => {
     const seasons = Object.keys(props)
     console.log(seasons);
     const [selectedSeason, setSelectedSeason] = useState(seasons[seasons.length-1])
@@ -33,4 +33,4 @@ export async function getStaticProps(context) {
 }
 
 
-export default history
+export default History
