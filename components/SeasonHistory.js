@@ -3,10 +3,10 @@ import { HistoricMatchup } from './Matchup';
 import TeamIcon from './TeamIcon';
 
 const SeasonHistory = (props) => {
-    let matchupList = props.season.map((item) => 
+    const matchupList = props.season.map((item) => 
         <MatchupPreview key={item.id} matchup={item}/>
     )
-
+    matchupList
     return (
         <div className={styles.historyContainer}>
             {matchupList}
@@ -22,7 +22,6 @@ const MatchupPreview = (props) => (
         <div className={styles.matchupDetails}>
             <HistoricMatchup {...props.matchup}/>
         </div>
-        
     </div>
 )
 

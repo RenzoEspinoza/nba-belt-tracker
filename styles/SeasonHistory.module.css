@@ -1,15 +1,27 @@
 .historyContainer {
     width: auto;
     display: flex;
-    flex-direction: row;
-    overflow: scroll;
+    flex-direction: row-reverse;
+    overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.historyContainer::-webkit-scrollbar { 
-    width: 0;
-    height: 0;
+.historyContainer::-webkit-scrollbar-track
+{
+  border-radius: 8px;
+  background-color: white;
+}
+
+.historyContainer::-webkit-scrollbar
+{
+  width: auto;
+}
+
+.historyContainer::-webkit-scrollbar-thumb
+{
+  border-radius: 8px;
+  background-color: rgb(170, 170, 170);
 }
 
 .iconContainer {
