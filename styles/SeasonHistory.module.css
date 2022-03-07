@@ -1,7 +1,7 @@
 .historyContainer {
     width: auto;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
