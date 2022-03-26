@@ -2,6 +2,8 @@
     background-color: white;
     padding: 0.25rem 2rem;
     border-radius: 0.25rem;
+    font-size: large;
+    font-weight: 500;
 }
 
 .container a:link {

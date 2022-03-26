@@ -1,9 +1,6 @@
 .container {
     width: fit-content;
-}
-
-.container:hover .seasonsDropdown {
-    display: flex;
+    position: relative;
 }
 
 .container ul{
@@ -13,26 +10,28 @@
     
 }
 
-.decadeRow {
+.seasons {
     display: flex;
     justify-content: space-evenly;
     flex-grow: 1;
-    width: 100%;
 }
 
-.decadeRow li {
+.seasons li {
     width: 100%;
     text-align: center;
-    border-left: 1px solid lightslategrey;
+    border-left: 1px solid rgb(157, 173, 189);
+    color: grey;
 }
 
-.decadeRow li:hover{
-    background-color: rgb(226, 226, 226);
+.seasons li:hover{
+    background-color: rgb(238, 238, 238);
     cursor: pointer;
+    color: black;
 }
 
 .dropdownContainer {
     position: absolute;
+    top: 43px;
     background-color: white;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
@@ -41,20 +40,27 @@
     z-index: 999;
 }
 
-.dropdownButton {
+.decade {
+    display: flex;
+}
+
+.decade li {
+    padding: 0.5rem;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.selectedSeason {
     border: none;
     padding: 0.5rem 2rem;
-    font-size: 18px;
+    font-size: 26px;
+    font-weight: 700;
     background-color: white;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
 
-.seasonsDropdown {
-    display: none;    
-}
-
-.seasonsDropdown li {
-    padding: 0.5rem;
-    font-size: 18px;
+.selectedSeason:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
 }

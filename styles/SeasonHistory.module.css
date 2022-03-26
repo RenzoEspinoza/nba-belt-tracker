@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin : 1rem;
+    margin : 2rem 1rem;
 }
 
 .matchupDetails {

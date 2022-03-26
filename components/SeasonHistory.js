@@ -6,7 +6,6 @@ const SeasonHistory = (props) => {
     const matchupList = props.season.map((item) => 
         <MatchupPreview key={item.id} matchup={item}/>
     )
-    matchupList
     return (
         <div className={styles.historyContainer}>
             {matchupList}
