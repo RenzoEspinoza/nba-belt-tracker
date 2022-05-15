@@ -34,6 +34,11 @@ const Matchup = (props) => {
 }
 
 export const CurrentMatchup = (props) => {
+    let title
+    if(props.winner){
+        title = `The ${props.champ.id === props.winner ? props.champ.name : props.challenger.name} are the ${props.season}-${props.season+1} NBA Title Belt winners!`
+    }
+    else title = 'Current Matchup'
     const startTime = new Date(props.startTime+'Z')
     const time = startTime.toLocaleTimeString('default', {hour: '2-digit', minute:'2-digit'})
     const date = startTime.toLocaleDateString('default', { month: 'short', weekday: 'long', day: 'numeric'})
@@ -43,7 +48,7 @@ export const CurrentMatchup = (props) => {
         )
     }
     return(
-        <Matchup {...props} championshipBelt={championshipBelt} time={time} date={date} title='Current Matchup' iconHeight='200px' iconWidth='200px' StreakCounter={<StreakCounter streak={props.streak}></StreakCounter>} ></Matchup>
+        <Matchup {...props} championshipBelt={championshipBelt} time={time} date={date} title={title} iconHeight='200px' iconWidth='200px' StreakCounter={<StreakCounter streak={props.streak}></StreakCounter>} ></Matchup>
     )
 }
 

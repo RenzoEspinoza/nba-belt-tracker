@@ -16,7 +16,7 @@ const SeasonHistory = (props) => {
 const MatchupPreview = (props) => (
     <div className={styles.matchupContainer}>
         <div className={styles.iconContainer}>
-            <TeamIcon teamId={props.matchup.champ.id} height={150} width={150}/>
+            <TeamIcon teamId={props.matchup.winner ? props.matchup.winner : props.matchup.champ.id} height={150} width={150}/>
         </div>
         <div className={styles.matchupDetails}>
             <HistoricMatchup {...props.matchup}/>
